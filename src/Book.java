@@ -1,16 +1,17 @@
 public class Book {
-    private String authorName;
     private String bookName;
-    int publishingYear;
+   private int publishingYear;
+   private String author;
 
-    public Book(String authorName, String bookName, int publishingYear) {
-        this.authorName = authorName;
+
+    public Book(String author, String bookName, int publishingYear) {
+        this.author = author;
         this.bookName = bookName;
         this.publishingYear = publishingYear;
     }
 
-    public String getAutorName() {
-        return this.authorName; // вернули значение автору
+    public String getAuthor() {
+        return this.author; // вернули значение автору
     }
 
     public String getBoocName() {
@@ -21,17 +22,13 @@ public class Book {
         return this.publishingYear;
     }
 
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName; // присвоил новое значение
-        // Вывели в консоль с помощью soutv. Book.getAuthorName
-        // повторили все действия та же с гожом выпуска и нзванием книги
-    }
-
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
-
     public void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
+    }
+    public void setAuthor(String author){
+        this.author = author;
+    }
+    public void setBookName( String bookName){
+        this.bookName = bookName;
     }
 }
