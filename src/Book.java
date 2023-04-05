@@ -1,34 +1,54 @@
+import java.util.Objects;
+
 public class Book {
-    private String bookName;
-   private int publishingYear;
-   private String author;
+    private final String name;
+    private String Book;
+    private int year;
+    private Author author;
 
 
-    public Book(String author, String bookName, int publishingYear) {
-        this.author = author;
-        this.bookName = bookName;
-        this.publishingYear = publishingYear;
-    }
-
-    public String getAuthor() {
-        return this.author; // вернули значение автору
-    }
-
-    public String getBoocName() {
-        return this.bookName; /// вернул  значение названию книги
-    }
-
-    public int getPublishingYear() {
-        return this.publishingYear;
-    }
-
-    public void setPublishingYear(int publishingYear) {
-        this.publishingYear = publishingYear;
-    }
-    public void setAuthor(String author){
+    public Book(String name, int year, Author author) {
+        this.name = name;
+        this.year = year;
         this.author = author;
     }
-    public void setBookName( String bookName){
-        this.bookName = bookName;
+
+    public String getBook() {
+        return Book;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", Book='" + Book + '\'' +
+                ", year=" + year +
+                ", author=" + author +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(name, book.name) && Objects.equals(Book, book.Book) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, Book, author);
     }
 }

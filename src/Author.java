@@ -1,7 +1,5 @@
 public class Author {
-    private final String firstName; // Если ставлбкласс автор то вылазит ошибка. 
-    // не могу понять почему продит оштбка,если в коасса стоит Автор а не стринг(((
-
+    private final String firstName;
     private final String lastName;
 
     public Author(String firstName, String lastName) {
@@ -15,5 +13,13 @@ public class Author {
 
     public String getLastName() {
         return lastName;
+    }
+// переопределил метод toString
+    @Override
+    public String toString() {
+        return "Author{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
