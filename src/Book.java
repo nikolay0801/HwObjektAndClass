@@ -2,7 +2,6 @@ import java.util.Objects;
 
 public class Book {
     private final String name;
-    private String Book;
     private int year;
     private Author author;
 
@@ -13,8 +12,8 @@ public class Book {
         this.author = author;
     }
 
-    public String getBook() {
-        return Book;
+    public String getName() {
+        return name;
     }
 
     public int getYear() {
@@ -33,7 +32,6 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "name='" + name + '\'' +
-                ", Book='" + Book + '\'' +
                 ", year=" + year +
                 ", author=" + author +
                 '}';
@@ -44,11 +42,6 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(name, book.name) && Objects.equals(Book, book.Book) && Objects.equals(author, book.author);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, Book, author);
+        return Objects.equals(name, book.name) && Objects.equals(author, book.author);
     }
 }
