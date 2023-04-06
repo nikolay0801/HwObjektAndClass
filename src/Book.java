@@ -12,6 +12,11 @@ public class Book {
         this.author = author;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, year, author);
+    }
+
     public String getName() {
         return name;
     }
