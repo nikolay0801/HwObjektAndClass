@@ -45,9 +45,17 @@ public class Book {
         Book book = (Book) o;
         return year == book.year && name.equals(book.name) && author.equals(book.author);
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(name, year, author);
+
+        // Как я понял тут я уже сравниваю hashcade с самим же значением  книги.
+        // Или же тут я что то делаю не так
     }
 
     @Override
